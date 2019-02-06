@@ -1,0 +1,92 @@
+main {
+  margin-top: -200px;
+
+  section {
+    display: flex;
+
+    h2 {
+      color: map-get($colors, primary);
+      font-weight: 700;
+      padding-bottom: 5px;
+      border-bottom: 4px solid map-get($colors, secondary);
+      display: inline;
+    }
+
+    .details,
+    .image {
+      flex: 1;
+      background: #fff;
+    }
+
+    .details .offer {
+      margin-bottom: 50px;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 30px;
+    }
+  }
+}
+
+section.suggestions {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .card {
+    flex: 0 1 32%;
+
+    .card-body {
+      height: 200px;
+      position: relative;
+
+      h3 {
+        position: absolute;
+        top: 0px;
+        left: 15px;
+        color: #fff;
+        padding-bottom: 5px;
+        border-bottom: 4px solid map-get($colors, secondary);
+        display: inline;
+      }
+    }
+
+    .card-footer {
+      display: flex;
+
+      div {
+        flex: 1;
+        padding: 10px;
+      }
+    }
+
+  }
+}
+
+
+.hero {
+  width: 100%;
+  background: url('/assets/images/header.png') no-repeat top right;
+  min-height: 750px;
+
+  .content {
+
+    .logo {
+      margin-bottom: 30px;
+      max-width: 200px;
+      margin-top: -55px;
+    }
+
+    p {
+      text-transform: uppercase;
+      font-weight: 700;
+      width: 23%;
+      margin-bottom: 50px;
+    }
+  }
+}
+

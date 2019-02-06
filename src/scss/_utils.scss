@@ -1,0 +1,64 @@
+.btn-primary {
+  background: map-get($colors, primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  font-size: map-get($font-size, big)
+}
+
+strong {
+  font-weight: 700
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-color-white {
+  color: white;
+}
+
+.text-color-primary {
+  color: map-get($colors, primary)
+}
+
+.background-color-primary {
+  background: map-get($colors, primary)
+}
+
+.background-color-lighter-primary {
+  background: map-get($colors, lightprimary)
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.font-bigger {
+  font-size: map-get($font-size, big)
+}
+
+.font-smaller {
+  font-size: map-get($font-size, small)
+}
+
+.block {
+  display: block
+}
+
+.float-left {
+  float: left
+}
+
+.float-right {
+  float: right
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.clear {
+  clear: both
+}

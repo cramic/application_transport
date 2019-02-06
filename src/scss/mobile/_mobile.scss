@@ -1,0 +1,90 @@
+@media all and (max-width: 1024px) {
+  .hero {
+    background: none
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .hero {
+    background: none;
+    min-height: 300px;
+    .content {
+      p {
+      width: 100%;
+      margin-bottom: 20px;
+      }
+      .logo {
+        margin: auto;
+        max-width: 100px;
+      }
+      .btn-primary{
+        font-size: map-get($font-size, normal)
+      }
+    }
+
+  }
+
+  nav {
+
+    ul.main-nav{
+
+      display:none;
+      background: map-get($colors, primary);
+      width:100%;
+      margin:0;
+      padding: 10px 5px;
+
+      &.active {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        li{
+          display:block;
+
+          a{
+            color: #fff;
+            &.active{
+              color: map-get($colors, secondary);
+              border:none;
+            }
+            &:hover{
+              border:none;
+            }
+          }
+        }
+    }
+  }
+
+    .nav-toggle {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      color: map-get($colors, primary);
+      font-size: 24px;
+
+      &.active{
+        color: #fff
+      }
+    }
+  }
+
+  section.suggestions{
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    .card {
+      flex: 0 1 calc(50% - 1em);
+    }
+  }
+
+}
+
+@media all and (max-width: 480px) {
+  .hero {
+    background: none
+  }
+}
