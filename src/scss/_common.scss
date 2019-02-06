@@ -1,3 +1,4 @@
+
 html {
   box-sizing: border-box;
 }
@@ -28,6 +29,7 @@ a {
 
 nav {
   display: flex;
+  justify-content: right;
 
   .nav-toggle {
     display: none;
