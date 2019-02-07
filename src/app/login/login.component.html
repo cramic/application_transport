@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="login">
+    <div class="form">
+      <h2>Identifiez-vous</h2>
+      <form>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" value="" id="login" required>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Mot de passe" value="" id="login" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Connexion</button>
+        <a [routerLink]="['/passwordRecovery']">Mot de passe oublié?</a>
+      </form>
+    </div>
+  </div>
+</div>

@@ -2,4 +2,6 @@
 @import 'common';
 @import 'home';
 @import 'utils';
-@import '/mobile/mobile'
+@import 'login';
+@import '/mobile/mobile';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
