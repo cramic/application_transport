@@ -1,0 +1,18 @@
+.devis {
+  // width: 100%;
+  display: flex;
+  & > div {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .trajet {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+
