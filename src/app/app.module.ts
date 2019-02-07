@@ -18,14 +18,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavComponent,
-    DevisComponent
+    DevisComponent,
     FooterComponent,
     LoginComponent,
+    PasswordNewComponent,
+    PasswordRecoveryComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +36,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
-    ReactiveFormsModule
+    MatInputModule,
+    ReactiveFormsModule,
     MatDatepickerModule,
     MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
