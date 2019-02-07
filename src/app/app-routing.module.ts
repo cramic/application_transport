@@ -1,13 +1,22 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, Router } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
+import { DevisComponent } from './devis/devis.component';
 
 const routes: Routes = [
-  {path: '**', component: HomepageComponent}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomepageComponent },
+  { path: 'devis', component: DevisComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(private router: Router) {
+    this.router.errorHandler = (error: any) => {
+      this.router.navigate(['home']);
+    };
+  }
+}
