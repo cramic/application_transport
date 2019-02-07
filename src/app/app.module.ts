@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 import { DevisComponent } from './devis/devis.component';
 
+import { PasswordNewComponent } from './password-new/password-new.component';
+import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
 import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,16 +25,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     NavComponent,
     DevisComponent
     FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatFormFieldModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatSelectModule,
-    MatDatepickerModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
     ReactiveFormsModule
+    MatDatepickerModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

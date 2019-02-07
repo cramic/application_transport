@@ -1,0 +1,39 @@
+.login, .passwordRecovery, .passwordNew{
+  background: url('/assets/images/bg-login.png') no-repeat center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 580px;
+
+  .form{
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    text-align: center;
+
+    p{
+      font-size: map-get($font-size, small);
+      width:80%;
+      margin:auto;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    button{
+        margin-top:15px;
+        align-self: center;
+    }
+
+    a{
+      color: map-get($colors, primary);
+      text-decoration: none;
+      font-size: map-get($font-size, small);
+      margin-top:15px;
+      display: block;
+    }
+  }
+}
