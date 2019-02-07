@@ -28,16 +28,13 @@ a {
 }
 
 nav {
-  display: flex;
-  align-items: right;
-  justify-content: right;
 
   .nav-toggle {
     display: none;
   }
 
   ul {
-    margin-left: auto;
+    float: right;
     padding: 0;
     margin-right: 15px;
 
@@ -60,13 +57,17 @@ nav {
           border-bottom: 6px solid map-get($colors, secondary)
         }
 
+        .btn-primary{
+          font-size: map-get($font-size, normal)
+        }
+
       }
     }
   }
 }
 
 footer {
-  margin-top: 300px;
+  margin-top: 50px;
   font-size: map-get($font-size, small);
   color: map-get($colors, gray)
 }

@@ -19,6 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+import { LogoComponent } from './logo/logo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     LoginComponent,
     PasswordNewComponent,
-    PasswordRecoveryComponent
+    PasswordRecoveryComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
