@@ -8,7 +8,6 @@ import { DevisComponent } from './devis/devis.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
   { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },

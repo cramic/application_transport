@@ -12,14 +12,16 @@ import { DevisComponent } from './devis/devis.component';
 
 import { PasswordNewComponent } from './password-new/password-new.component';
 import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,7 @@ import { LogoComponent } from './logo/logo.component';
     PasswordNewComponent,
     PasswordRecoveryComponent,
     LogoComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,7 +44,9 @@ import { LogoComponent } from './logo/logo.component';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
