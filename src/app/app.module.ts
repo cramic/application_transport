@@ -24,6 +24,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './admin/administration/administration.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,9 @@ import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
     LoginComponent,
     PasswordNewComponent,
     PasswordRecoveryComponent,
-    LogoComponent
+    LogoComponent,
+    AdministrationComponent,
+    AdminNavComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
     MatSelectModule,
     FormsModule,
     MatCheckboxModule,
-    MatStepperModule
+    MatStepperModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
