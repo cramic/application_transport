@@ -5,18 +5,24 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
+  .container{
+    padding:10px;
+  }
+
+  .logo {
+    margin: auto;
+    max-width: 80px;
+  }
+
   .hero {
     background: none;
-    min-height: 300px;
+    min-height: 1px;
+
     .content {
       p {
       width: 100%;
       margin-bottom: 20px;
-      }
-      .logo {
-        margin: auto;
-        max-width: 100px;
       }
       .btn-primary{
         font-size: map-get($font-size, normal)
@@ -25,7 +31,27 @@
 
   }
 
+  main{
+    margin-top:0;
+
+    .main-offer{
+      .image{
+        display:none;
+      }
+      .details{
+        padding:0;
+
+        h2,p{
+          padding-left:15px;
+        }
+      }
+    }
+  }
+
   nav {
+
+    position: relative;
+    z-index:1;
 
     ul.main-nav{
 
@@ -34,6 +60,7 @@
       width:100%;
       margin:0;
       padding: 10px 5px;
+      z-index:100;
 
       &.active {
         display: flex;
@@ -50,6 +77,11 @@
             }
             &:hover{
               border:none;
+            }
+
+            &.btn-primary{
+              padding:0;
+              font-size: map-get($font-size, normal)
             }
           }
         }
@@ -73,18 +105,30 @@
 
   section.suggestions{
     display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
 
     .card {
       flex: 0 1 calc(50% - 1em);
+      margin-bottom:15px;
+
+      .card-footer{
+        height:75px;
+      }
     }
   }
 
-}
+  .login, .passwordRecovery, .passwordNew{
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top:100px;
 
-@media all and (max-width: 480px) {
-  .hero {
-    background: none
+    .form{
+      width:100%;
+    }
   }
+
 }
