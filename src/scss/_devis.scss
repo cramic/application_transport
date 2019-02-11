@@ -1,28 +1,34 @@
 form {
   width: 100%;
-  margin: 0 auto;
-  .firstScreen {
-    width: 100%;
-    .time {
-      width: 100%;
+
+  .adress {
+    display: flex;
+
+    mat-form-field {
+      width: 300px;
     }
-    .adress {
+
+    .number {
       display: flex;
-      mat-form-field {
-        width: 300px;
-      }
-      .number {
-        display: flex;
-        width: 300px;
-      }
-      #departureZip {
-        width: 150px;
-      }
+      width: 300px;
+    }
+
+    #departureZip {
+      width: 150px;
     }
   }
 }
+
+.check {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 .buttons {
   position: relative;
+
   button {
     position: relative;
     left: 50%;
@@ -30,6 +36,3 @@ form {
     margin: 0 2px;
   }
 }
-
-
-

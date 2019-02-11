@@ -1,7 +1,6 @@
 <app-logo></app-logo>
 <h1>Demande de devis</h1>
 
-
 <mat-horizontal-stepper #stepper>
   <!--==============================================
         PREMIER ECRAN => informations pour le départ
@@ -10,53 +9,51 @@
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Départ</ng-template>
 
-      <div class="firstScreen">
-        <div class="time">
-          <mat-form-field>
-            <input id="departureDate" formControlName="departureDate" matInput [matDatepicker]="pickerDepartureDate"
-              placeholder="Date de départ">
-            <mat-datepicker-toggle matSuffix [for]="pickerDepartureDate"></mat-datepicker-toggle>
-            <mat-datepicker #pickerDepartureDate></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field>
-            <input id="departureTime" formControlName="departureTime" matInput [matDatepicker]="pickerDepartureTime"
-              placeholder="Heure de départ">
-            <mat-datepicker-toggle matSuffix [for]="pickerDepartureTime"></mat-datepicker-toggle>
-            <mat-datepicker #pickerDepartureTime></mat-datepicker>
-          </mat-form-field>
-        </div>
-        <div class="adress">
-          <mat-form-field>
-            <textarea id="departureStreet" formControlName="departureStreet" matInput placeholder="Rue"></textarea>
-          </mat-form-field>
+      <div class="time">
+        <mat-form-field>
+          <input id="departureDate" formControlName="departureDate" matInput [matDatepicker]="pickerDepartureDate"
+            placeholder="Date de départ">
+          <mat-datepicker-toggle matSuffix [for]="pickerDepartureDate"></mat-datepicker-toggle>
+          <mat-datepicker #pickerDepartureDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <input id="departureTime" formControlName="departureTime" matInput [matDatepicker]="pickerDepartureTime"
+            placeholder="Heure de départ">
+          <mat-datepicker-toggle matSuffix [for]="pickerDepartureTime"></mat-datepicker-toggle>
+          <mat-datepicker #pickerDepartureTime></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="adress">
+        <mat-form-field>
+          <textarea id="departureStreet" formControlName="departureStreet" matInput placeholder="Rue"></textarea>
+        </mat-form-field>
 
-          <div class="number">
-            <mat-form-field>
-              <textarea id="departureNumber" formControlName="departureNumber" matInput placeholder="Numéro"></textarea>
-            </mat-form-field>
-
-            <mat-form-field>
-              <textarea id="departureBox" formControlName="departureBox" matInput placeholder="Boîte"></textarea>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="adress">
+        <div class="number">
           <mat-form-field>
-            <textarea id="departureZip" formControlName="departureZip" matInput placeholder="Code Postal"></textarea>
+            <textarea id="departureNumber" formControlName="departureNumber" matInput placeholder="Numéro"></textarea>
           </mat-form-field>
 
           <mat-form-field>
-            <textarea id="departureCity" formControlName="departureCity" matInput placeholder="Ville"></textarea>
-          </mat-form-field>
-
-          <mat-form-field>
-            <textarea id="departureCountry" formControlName="departureCountry" matInput placeholder="Pays"></textarea>
+            <textarea id="departureBox" formControlName="departureBox" matInput placeholder="Boîte"></textarea>
           </mat-form-field>
         </div>
       </div>
+      <div class="adress">
+        <mat-form-field>
+          <textarea id="departureZip" formControlName="departureZip" matInput placeholder="Code Postal"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea id="departureCity" formControlName="departureCity" matInput placeholder="Ville"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea id="departureCountry" formControlName="departureCountry" matInput placeholder="Pays"></textarea>
+        </mat-form-field>
+      </div>
 
       <div class="buttons">
-        <button mat-raised-button color="primary" matStepperNext>Next</button>
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
@@ -69,47 +66,52 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Arrivée</ng-template>
 
-      <mat-form-field>
-        <input id="backDate" formControlName="backDate" matInput [matDatepicker]="pickerBackDate" placeholder="Date de retour">
-        <mat-datepicker-toggle matSuffix [for]="pickerBackDate"></mat-datepicker-toggle>
-        <mat-datepicker #pickerBackDate></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field>
-        <input id="backTime" formControlName="backTime" matInput [matDatepicker]="pickerBackTime" placeholder="Heure de retour">
-        <mat-datepicker-toggle matSuffix [for]="pickerBackTime"></mat-datepicker-toggle>
-        <mat-datepicker #pickerBackTime></mat-datepicker>
-      </mat-form-field>
-
-      <mat-form-field>
-        <textarea id="backStreet" formControlName="backStreet" matInput placeholder="Rue"></textarea>
-      </mat-form-field>
-
-      <div>
+      <div class="time">
         <mat-form-field>
-          <textarea id="backNumber" formControlName="backNumber" matInput placeholder="Numéro"></textarea>
+          <input id="backDate" formControlName="backDate" matInput [matDatepicker]="pickerBackDate" placeholder="Date de retour">
+          <mat-datepicker-toggle matSuffix [for]="pickerBackDate"></mat-datepicker-toggle>
+          <mat-datepicker #pickerBackDate></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field>
-          <textarea id="backBox" formControlName="backBox" matInput placeholder="Boîte"></textarea>
+          <input id="backTime" formControlName="backTime" matInput [matDatepicker]="pickerBackTime" placeholder="Heure de retour">
+          <mat-datepicker-toggle matSuffix [for]="pickerBackTime"></mat-datepicker-toggle>
+          <mat-datepicker #pickerBackTime></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="adress">
+        <mat-form-field>
+          <textarea id="backStreet" formControlName="backStreet" matInput placeholder="Rue"></textarea>
+        </mat-form-field>
+
+        <div class="number">
+          <mat-form-field>
+            <textarea id="backNumber" formControlName="backNumber" matInput placeholder="Numéro"></textarea>
+          </mat-form-field>
+
+          <mat-form-field>
+            <textarea id="backBox" formControlName="backBox" matInput placeholder="Boîte"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="adress">
+
+        <mat-form-field>
+          <textarea id="backZip" formControlName="backZip" matInput placeholder="Code Postal"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea id="backCity" formControlName="backCity" matInput placeholder="Ville"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea id="backCountry" formControlName="backCountry" matInput placeholder="Pays"></textarea>
         </mat-form-field>
       </div>
 
-      <mat-form-field>
-        <textarea id="backZip" formControlName="backZip" matInput placeholder="Code Postal"></textarea>
-      </mat-form-field>
-
-      <mat-form-field>
-        <textarea id="backCity" formControlName="backCity" matInput placeholder="Ville"></textarea>
-      </mat-form-field>
-
-      <mat-form-field>
-        <textarea id="backCountry" formControlName="backCountry" matInput placeholder="Pays"></textarea>
-      </mat-form-field>
-
       <div class="buttons">
-        <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-        <button mat-raised-button color="primary" matStepperNext>Next</button>
+        <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" matStepperNext>Next</button>
       </div>
     </form>
   </mat-step>
@@ -124,33 +126,27 @@
     <mat-form-field>
       <textarea id="passengersType" matInput placeholder="Personnes à mobilité réduite"></textarea>
     </mat-form-field>
-
-    <mat-checkbox>tv</mat-checkbox>
-
-    <mat-checkbox>wc</mat-checkbox>
-
-    <mat-checkbox>dvd</mat-checkbox>
-
-    <mat-checkbox>café</mat-checkbox>
-
-    <mat-checkbox>tablettes</mat-checkbox>
-
-    <mat-checkbox>ceintures</mat-checkbox>
-
-    <mat-checkbox>prises</mat-checkbox>
-
-    <mat-checkbox>wi-fi</mat-checkbox>
+    <div class="check">
+      <mat-checkbox>tv</mat-checkbox>
+      <mat-checkbox>wc</mat-checkbox>
+      <mat-checkbox>dvd</mat-checkbox>
+      <mat-checkbox>café</mat-checkbox>
+      <mat-checkbox>tablettes</mat-checkbox>
+      <mat-checkbox>ceintures</mat-checkbox>
+      <mat-checkbox>prises</mat-checkbox>
+      <mat-checkbox>wi-fi</mat-checkbox>
+    </div>
 
     <mat-form-field class="example-full-width">
       <textarea matInput placeholder="Commentaires"></textarea>
     </mat-form-field>
-
-    <mat-checkbox>Validation RGPD</mat-checkbox>
-
+    <div class="check">
+      <mat-checkbox>Validation RGPD</mat-checkbox>
+    </div>
 
     <div class="buttons">
-      <button mat-raised-button color="primary" matStepperPrevious>Back</button>
-      <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+      <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+      <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>
