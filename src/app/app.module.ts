@@ -22,8 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
-import { AdministrationComponent } from './admin/administration/administration.component';
-import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { MatMenuModule} from '@angular/material/menu';
     PasswordRecoveryComponent,
     LogoComponent,
     AdministrationComponent,
-    AdminNavComponent
   ],
   imports: [
     BrowserModule,
