@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 
 import { AdministrationComponent } from './administration.component';
 
@@ -8,9 +10,14 @@ describe('AdministrationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdministrationComponent ]
-    })
-    .compileComponents();
+      declarations: [ AdministrationComponent ],
+      imports: [
+        NoopAnimationsModule,
+        MatPaginatorModule,
+        MatSortModule,
+        MatTableModule,
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +26,7 @@ describe('AdministrationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should compile', () => {
     expect(component).toBeTruthy();
   });
 });

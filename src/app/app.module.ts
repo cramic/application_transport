@@ -24,6 +24,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material'
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,11 @@ import { MatMenuModule} from '@angular/material/menu';
     FormsModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatMenuModule
+    MatMenuModule,
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
