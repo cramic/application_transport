@@ -24,7 +24,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
+<<<<<<< HEAD
 
+=======
+import { ContactComponent } from './contact/contact.component';
+import { AgencyComponent } from './agency/agency.component';
+import { FleetComponent } from './fleet/fleet.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material'
+>>>>>>> master
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +45,9 @@ import { MatMenuModule} from '@angular/material/menu';
     PasswordRecoveryComponent,
     LogoComponent,
     AdministrationComponent,
+    ContactComponent,
+    AgencyComponent,
+    FleetComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +62,11 @@ import { MatMenuModule} from '@angular/material/menu';
     FormsModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatMenuModule
+    MatMenuModule,
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
