@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormControlDirective } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormControlDirective } from '@angular/forms';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
@@ -27,6 +27,9 @@ export const MY_FORMATS = {
     monthYearA11yLabel: 'MMMM YYYY',
   },
 };
+/**
+ * @title Stepper overview
+ */
 @Component({
   selector: 'app-devis',
   templateUrl: './devis.component.html',
@@ -41,16 +44,15 @@ export const MY_FORMATS = {
   ],
 })
 export class DevisComponent implements OnInit {
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
-  form: FormGroup;
-
-  constructor() { const date = new FormControl(moment()); }
+  constructor(private _formBuilder: FormBuilder) {}
 
 
 
   ngOnInit() {
-
-    this.form = new FormGroup({
+    this.firstFormGroup = this._formBuilder.group({
       departureDate: new FormControl(),
       departureTime: new FormControl(),
       departureStreet: new FormControl(),
@@ -58,7 +60,9 @@ export class DevisComponent implements OnInit {
       departureBox: new FormControl(),
       departureZip: new FormControl(),
       departureCity: new FormControl(),
-      departureCountry: new FormControl(),
+      departureCountry: new FormControl()
+    });
+    this.secondFormGroup = this._formBuilder.group({
       backDate: new FormControl(),
       backTime: new FormControl(),
       backStreet: new FormControl(),

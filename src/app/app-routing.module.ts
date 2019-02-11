@@ -9,7 +9,6 @@ import { AdministrationComponent } from './admin/administration/administration.c
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
   { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },
