@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },
   { path: 'passwordNew', component: PasswordNewComponent },
   { path: 'devis', component: DevisComponent },
-  { path: 'admin', component: AdministrationComponent }
+  { path: 'administration', component: AdministrationComponent }
 ];
 
 @NgModule({
