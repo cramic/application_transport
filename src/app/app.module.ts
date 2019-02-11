@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
+import { AdministrationComponent } from './admin/administration/administration.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +31,7 @@ import { LogoComponent } from './logo/logo.component';
     FooterComponent,
     LoginComponent,
     PasswordNewComponent,
-    PasswordRecoveryComponent,
-    LogoComponent
+    PasswordRecoveryComponent
   ],
   imports: [
     BrowserModule,
