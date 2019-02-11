@@ -1,23 +1,12 @@
-.devis {
-  // width: 100%;
-  display: flex;
-  justify-content: space-between;
 
-  & > div {
-    width: 100%;
-  }
-
-  .trajet {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-  }
-}
-.confirm {
+.buttons {
+  width: 100%;
   position: relative;
   button {
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 5px 0 5px;
   }
 }
 

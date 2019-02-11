@@ -6,7 +6,9 @@
       <!--==============================================
         PREMIER ECRAN => informations pour le départ
       ==================================================-->
+
     <mat-step [stepControl]="firstFormGroup">
+      <div class="firstScreen">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Départ</ng-template>
 
@@ -78,10 +80,11 @@
 
 
 
-        <div>
-          <button mat-button matStepperNext>Next</button>
+        <div class="buttons">
+          <button mat-flat-button color="primary" matStepperNext>Next</button>
         </div>
       </form>
+    </div>
     </mat-step>
 
     <!--==============================================
@@ -154,9 +157,9 @@
                         placeholder="Pays"></textarea>
             </mat-form-field>
 
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+        <div class="buttons">
+          <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+          <button mat-flat-button color="primary" matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
@@ -197,9 +200,9 @@
         <mat-checkbox>Validation RGPD</mat-checkbox>
 
 
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
+      <div class="buttons">
+        <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+        <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
       </div>
     </mat-step>
   </mat-horizontal-stepper>
