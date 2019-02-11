@@ -7,6 +7,8 @@ import { PasswordNewComponent } from './password-new/password-new.component';
 import { DevisComponent } from './devis/devis.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { ContactComponent } from './contact/contact.component';
+import { AgencyComponent } from './agency/agency.component';
+import { FleetComponent } from './fleet/fleet.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'passwordNew', component: PasswordNewComponent },
   { path: 'devis', component: DevisComponent },
   { path: 'administration', component: AdministrationComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'agency', component: AgencyComponent },
+  { path: 'fleet', component: FleetComponent }
 ];
 
 @NgModule({

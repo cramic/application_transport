@@ -25,6 +25,8 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './contact/contact.component';
+import { AgencyComponent } from './agency/agency.component';
+import { FleetComponent } from './fleet/fleet.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +40,8 @@ import { ContactComponent } from './contact/contact.component';
     LogoComponent,
     AdministrationComponent,
     ContactComponent,
+    AgencyComponent,
+    FleetComponent,
   ],
   imports: [
     BrowserModule,

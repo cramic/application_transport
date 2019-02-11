@@ -47,10 +47,10 @@ section.suggestions {
       h3 {
         position: absolute;
         top: 0px;
-        left: 15px;
+        left: 0px;
         color: #fff;
-        padding-bottom: 5px;
-        border-bottom: 4px solid map-get($colors, secondary);
+        padding: 8px 5px;
+        background: map-get($colors, secondary);
         display: inline;
       }
     }
@@ -88,6 +88,9 @@ section.suggestions {
     }
   }
 }
-.smallLogo{
-  display:none;
+
+@media all and (min-width: 720px) {
+  .home-logo .smallLogo{
+    display:none;
+  }
 }
