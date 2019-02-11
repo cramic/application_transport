@@ -68,3 +68,7 @@ strong {
   -moz-box-shadow: 0px 4px 98px -6px rgba(60, 64, 198, 0.51);
   box-shadow: 0px 4px 98px -6px rgba(60, 64, 198, 0.51);
 }
+
+.orange{
+  color: map-get($colors, secondary)
+}
