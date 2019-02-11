@@ -24,6 +24,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { MatMenuModule} from '@angular/material/menu';
     PasswordRecoveryComponent,
     LogoComponent,
     AdministrationComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { PasswordRecoveryComponent } from './password-recovery/password-recovery
 import { PasswordNewComponent } from './password-new/password-new.component';
 import { DevisComponent } from './devis/devis.component';
 import { AdministrationComponent } from './administration/administration.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },
   { path: 'passwordNew', component: PasswordNewComponent },
   { path: 'devis', component: DevisComponent },
-  { path: 'administration', component: AdministrationComponent }
+  { path: 'administration', component: AdministrationComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
