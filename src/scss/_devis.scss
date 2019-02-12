@@ -32,7 +32,9 @@ form {
 
 .example-full-width {
   width: 100%;
-  min-height: 200px;
+  textarea {
+    min-height: 200px;
+  }
 }
 
 

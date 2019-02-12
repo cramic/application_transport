@@ -9,6 +9,7 @@ import { AdministrationComponent } from './administration/administration.compone
 import { ContactComponent } from './contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
 import { FleetComponent } from './fleet/fleet.component';
+import { RgpdComponent } from './rgpd/rgpd.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'administration', component: AdministrationComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'agency', component: AgencyComponent },
-  { path: 'fleet', component: FleetComponent }
+  { path: 'fleet', component: FleetComponent },
+  { path: 'rgpd/rgpd.component.html', component: RgpdComponent }
 ];
 
 @NgModule({
