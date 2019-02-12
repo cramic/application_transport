@@ -67,9 +67,9 @@ import { RgpdComponent } from './rgpd/rgpd.component';
     LayoutModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
