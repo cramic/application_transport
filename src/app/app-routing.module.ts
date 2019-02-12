@@ -5,6 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
 import { PasswordNewComponent } from './password-new/password-new.component';
 import { DevisComponent } from './devis/devis.component';
+import { AdministrationComponent } from './administration/administration.component';
+import { ContactComponent } from './contact/contact.component';
+import { AgencyComponent } from './agency/agency.component';
+import { FleetComponent } from './fleet/fleet.component';
+import { RgpdComponent } from './rgpd/rgpd.component';
 import { AdministrationComponent } from './admin/administration/administration.component';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -19,7 +24,11 @@ const routes: Routes = [
     component: PasswordNewComponent
   },
   { path: 'devis', component: DevisComponent },
-  { path: 'admin', component: AdministrationComponent }
+  { path: 'administration', component: AdministrationComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'agency', component: AgencyComponent },
+  { path: 'fleet', component: FleetComponent },
+  { path: 'rgpd/rgpd.component.html', component: RgpdComponent }
 ];
 
 @NgModule({

@@ -29,7 +29,7 @@ h1 {
   background: #fff;
   margin: auto;
   max-width: 1200px;
-  padding: 30px;
+  padding: 15px;
   clear:both;
 }
 
@@ -80,4 +80,12 @@ footer {
   margin-top: 50px;
   font-size: map-get($font-size, small);
   color: map-get($colors, gray)
+}
+
+.btn-primary{
+  transition: .2s;
+  &:hover{
+    border:none;
+    background: map-get($colors, secondary);
+  }
 }

@@ -1,0 +1,53 @@
+.fleet{
+  background: url('/assets/images/bg-login.png') no-repeat top left;
+}
+
+h1{
+    font-weight: 700;
+    padding: 8px 12px;
+    color: map-get($colors, black);
+    display: block;
+    font-size: map-get($font-size, big);
+    margin: 0 0 0 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  img{
+    width: 100%;
+    transition: .2s;
+
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+
+  .grid-item {
+    width: 100%;
+    background: map-get($colors, ligthgray);
+    margin-top: 2%;
+    overflow: hidden;
+
+    @media (min-width: 48rem) {
+      width: 49%;
+      &:nth-child(odd) {
+        margin-right: 2%;
+      }
+    }
+
+    @media (min-width: 62rem) {
+      width: 23.5%;
+      &:not(:nth-child(4n)) {
+        margin-right: 2%;
+      }
+    }
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+  }
+}

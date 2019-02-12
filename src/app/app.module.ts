@@ -23,10 +23,15 @@ import { FormsModule } from '@angular/forms';
 import { LogoComponent } from './logo/logo.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
-import { AdministrationComponent } from './admin/administration/administration.component';
-import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import { ContactComponent } from './contact/contact.component';
+import { AgencyComponent } from './agency/agency.component';
+import { FleetComponent } from './fleet/fleet.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { RgpdComponent } from './rgpd/rgpd.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +44,10 @@ import { MatCardModule } from '@angular/material/card';
     PasswordRecoveryComponent,
     LogoComponent,
     AdministrationComponent,
-    AdminNavComponent
+    ContactComponent,
+    AgencyComponent,
+    FleetComponent,
+    RgpdComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +63,11 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatCheckboxModule,
     MatStepperModule,
+    MatMenuModule,
+    LayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
     MatMenuModule,
     MatCardModule
   ],
