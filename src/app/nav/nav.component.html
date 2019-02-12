@@ -7,5 +7,8 @@
   <li><a [routerLink]="['#']" routerLinkActive="active">Notre flotte</a></li>
   <li><a [routerLink]="['./devis']" routerLinkActive="active">Demander un devis</a></li>
   <li><a [routerLink]="['#']" routerLinkActive="active">Contact</a></li>
-  <li><a [routerLink]="['/login']" class="btn-primary">Login</a></li>
+  <li>
+    <a *ngIf="!isLoggedIn" [routerLink]="['/login']" class="btn-primary">Se connecter</a>
+    <a *ngIf="isLoggedIn" [routerLink]="['/admin']" class="btn-primary">Espace client</a>
+  </li>
 </ul>

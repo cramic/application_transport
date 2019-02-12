@@ -1,18 +1,25 @@
 <app-logo></app-logo>
-  <div class="login">
-    <div class="form  shadow">
-      <h2>Identifiez-vous</h2>
-      <form>
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Email" value="" id="login" required>
-        </mat-form-field>
+<div class="login">
+  <div class="form shadow">
+    <h2>Identifiez-vous</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
 
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Mot de passe" value="" id="login" required>
-        </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Email" value="" id="login" [formControl]="loginForm.controls['login']">
+      </mat-form-field>
 
-        <button mat-raised-button color="primary">Connexion</button>
-        <a [routerLink]="['/passwordRecovery']">Mot de passe oublié?</a>
-      </form>
-    </div>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Mot de passe" type="password" value="" id="password" [formControl]="loginForm.controls['password']">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Connexion</button>
+
+      <a [routerLink]="['/passwordRecovery']">Mot de passe oublié?</a>
+
+    </form>
+  </div>
+
+  <mat-card *ngIf="errorOccurred" class="errorLogin">
+    {{errorMessage}}
+  </mat-card>
 </div>

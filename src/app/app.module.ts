@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
@@ -25,6 +26,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './admin/administration/administration.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,7 @@ import { MatMenuModule} from '@angular/material/menu';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -52,7 +55,8 @@ import { MatMenuModule} from '@angular/material/menu';
     FormsModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

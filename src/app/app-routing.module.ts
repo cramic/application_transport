@@ -6,13 +6,18 @@ import { PasswordRecoveryComponent } from './password-recovery/password-recovery
 import { PasswordNewComponent } from './password-new/password-new.component';
 import { DevisComponent } from './devis/devis.component';
 import { AdministrationComponent } from './admin/administration/administration.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },
-  { path: 'passwordNew', component: PasswordNewComponent },
+  {
+    path: 'passwordNew',
+    canActivate: [AuthGuard],
+    component: PasswordNewComponent
+  },
   { path: 'devis', component: DevisComponent },
   { path: 'admin', component: AdministrationComponent }
 ];
