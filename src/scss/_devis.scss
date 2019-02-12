@@ -26,13 +26,15 @@ form {
   justify-content: space-between;
 }
 
+
 .buttons {
+  width: 100%;
   position: relative;
 
   button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin: 0 2px;
+    margin: 0 5px 0 5px;
   }
 }

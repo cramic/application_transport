@@ -24,15 +24,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
-<<<<<<< HEAD
-
-=======
 import { ContactComponent } from './contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material'
->>>>>>> master
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
