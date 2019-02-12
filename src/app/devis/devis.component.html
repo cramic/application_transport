@@ -1,10 +1,13 @@
 <app-logo></app-logo>
+
 <h1>Demande de devis</h1>
+<div class="shadow title-shadow" style="text-align: center; margin: 15px 0 15px 0; padding: 15px 0 0 0">
 
 <mat-horizontal-stepper #stepper>
   <!--==============================================
         PREMIER ECRAN => informations pour le départ
       ==================================================-->
+
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Départ</ng-template>
@@ -53,7 +56,7 @@
       </div>
 
       <div class="buttons">
-        <button mat-flat-button color="primary" matStepperNext>Next</button>
+        <button mat-flat-button color="primary" matStepperNext>Suivant</button>
       </div>
     </form>
   </mat-step>
@@ -110,8 +113,8 @@
       </div>
 
       <div class="buttons">
-        <button mat-flat-button color="primary" matStepperPrevious>Back</button>
-        <button mat-flat-button color="primary" matStepperNext>Next</button>
+        <button mat-flat-button color="primary" matStepperPrevious>Etape précendente</button>
+        <button mat-flat-button color="primary" matStepperNext>Suivant</button>
       </div>
     </form>
   </mat-step>
@@ -145,8 +148,9 @@
     </div>
 
     <div class="buttons">
-      <button mat-flat-button color="primary" matStepperPrevious>Back</button>
-      <button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>
+      <button mat-flat-button color="primary" matStepperPrevious>Etape précédente</button>
+      <!--<button mat-flat-button color="primary" (click)="stepper.reset()">Reset</button>-->
     </div>
   </mat-step>
 </mat-horizontal-stepper>
+</div>
