@@ -3,10 +3,9 @@
 }
 
 h1{
-    color: white;
     font-weight: 700;
     padding: 8px 12px;
-    color: map-get($colors, primary);
+    color: map-get($colors, black);
     display: block;
     font-size: map-get($font-size, big);
     margin: 0 0 0 0;
