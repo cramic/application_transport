@@ -81,3 +81,11 @@ footer {
   font-size: map-get($font-size, small);
   color: map-get($colors, gray)
 }
+
+.btn-primary{
+  transition: .2s;
+  &:hover{
+    border:none;
+    background: map-get($colors, secondary);
+  }
+}

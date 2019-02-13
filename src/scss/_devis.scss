@@ -1,25 +1,55 @@
-.devis {
-  // width: 100%;
+.title-shadow {
+  margin-top: 2rem;
+}
+
+form {
+  width: 100%;
+
+  .adress {
+    display: flex;
+
+    mat-form-field {
+      width: 300px;
+    }
+
+    .number {
+      display: flex;
+      width: 300px;
+    }
+
+    #departureZip {
+      width: 150px;
+    }
+  }
+}
+
+.check {
+  width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: space-between;
-
-  & > div {
-    width: 100%;
-  }
-
-  .trajet {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-  }
 }
-.confirm {
+
+.example-full-width {
+  width: 100%;
+  textarea {
+    min-height: 200px;
+  }
+
+}
+.rgpd {
+  left: 0;
+}
+
+
+.buttons {
+  width: 100%;
   position: relative;
+
   button {
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 5px 0 5px;
   }
 }
-
-
-
