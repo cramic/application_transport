@@ -30,7 +30,6 @@ import { ContactComponent } from './contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { RgpdComponent } from './rgpd/rgpd.component';
 @NgModule({
   declarations: [

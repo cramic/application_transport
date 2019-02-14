@@ -12,9 +12,9 @@ export interface AdministrationItem {
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: AdministrationItem[] = [
-  {Devis: 'num id', Statut: 'En cours', Actions: ''},
-  {Devis: 'num id', Statut: 'En cours', Actions: ''},
-  {Devis: 'num id', Statut: 'Terminé', Actions: ''},
+  {Devis: 'num id 1', Statut: 'En cours', Actions: 'Détails / Supprimer'},
+  {Devis: 'num id 2', Statut: 'En cours', Actions: 'Détails / Supprimer'},
+  {Devis: 'num id 3', Statut: 'Terminé', Actions: 'Détails / Supprimer'},
 
 ];
 

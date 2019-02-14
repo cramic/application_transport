@@ -1,34 +1,60 @@
-<app-logo></app-logo>
-<h1>Bienvenue dans votre administration</h1>
-<h2>Ci-dessous votre listes de devis en cours</h2>
-<div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
-    <!-- Devis Column -->
-    <ng-container matColumnDef="Devis">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Devis</th>
-      <td mat-cell *matCellDef="let row">{{row.Devis}}</td>
-    </ng-container>
+  <app-logo></app-logo>
 
-    <!-- Statut Column -->
-    <ng-container matColumnDef="Statut">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Statut</th>
-      <td mat-cell *matCellDef="let row">{{row.Statut}}</td>
-    </ng-container>
+  <h1>Bienvenue dans votre administration</h1>
+<div class="wrapper">
+  <div class="gauche">
+      <nav class="menu">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+      </nav>
+  </div>
+<!--<div class="wrapper">-->
+<div class="droite">
+    <h2>Ci-dessous votre listes de devis en cours</h2>
 
-     <!-- Actions Column -->
-    <ng-container matColumnDef="Actions">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
-      <td mat-cell *matCellDef="let row">{{row.Actions}}</td>
-    </ng-container>
+  <!--<nav class="menu">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+  </nav>-->
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-  <mat-paginator #paginator
-      [length]="dataSource.data.length"
-      [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[25, 50, 100, 250]">
-  </mat-paginator>
+<div class="content">
+  <div class="mat-elevation-z8">
+    <table mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+      <!-- Devis Column -->
+      <ng-container matColumnDef="Devis">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Devis</th>
+        <td mat-cell *matCellDef="let row">{{row.Devis}}</td>
+      </ng-container>
+  
+      <!-- Statut Column -->
+      <ng-container matColumnDef="Statut">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Statut</th>
+        <td mat-cell *matCellDef="let row">{{row.Statut}}</td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Actions</th>
+        <td mat-cell *matCellDef="let row">{{row.Actions}}</td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator #paginator
+        [length]="dataSource.data.length"
+        [pageIndex]="0"
+        [pageSize]="50"
+        [pageSizeOptions]="[25, 50, 100, 250]">
+    </mat-paginator>
+  </div>
 </div>
+</div>
+
+</div>
+  
