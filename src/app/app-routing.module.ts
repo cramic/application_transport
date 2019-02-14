@@ -10,15 +10,25 @@ import { ContactComponent } from './contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { RgpdComponent } from './rgpd/rgpd.component';
+// import { AdministrationComponent } from './admin/administration/administration.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomepageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'passwordRecovery', component: PasswordRecoveryComponent },
-  { path: 'passwordNew', component: PasswordNewComponent },
+  {
+    path: 'passwordNew',
+    canActivate: [AuthGuard],
+    component: PasswordNewComponent
+  },
   { path: 'devis', component: DevisComponent },
-  { path: 'administration', component: AdministrationComponent },
+  {
+    path: 'client',
+    canActivate: [AuthGuard],
+    component: AdministrationComponent
+  },
   { path: 'contact', component: ContactComponent },
   { path: 'agency', component: AgencyComponent },
   { path: 'fleet', component: FleetComponent },

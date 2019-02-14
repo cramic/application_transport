@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
@@ -24,11 +25,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatStepperModule } from '@angular/material/stepper';
 import { AdministrationComponent } from './administration/administration.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { ContactComponent } from './contact/contact.component';
 import { AgencyComponent } from './agency/agency.component';
 import { FleetComponent } from './fleet/fleet.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { RgpdComponent } from './rgpd/rgpd.component';
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { RgpdComponent } from './rgpd/rgpd.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -64,7 +66,9 @@ import { RgpdComponent } from './rgpd/rgpd.component';
     LayoutModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatMenuModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

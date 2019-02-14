@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestapiService } from '../services/restapi.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  isLoggedIn: boolean;
+
+  constructor(private restapiService: RestapiService) { }
 
   ngOnInit() {
+    this.restapiService.isLoggedIn().subscribe(data => this.isLoggedIn = data);
   }
 
 }
