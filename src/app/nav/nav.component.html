@@ -10,6 +10,6 @@
   <li><a [routerLink]="['#']" routerLinkActive="active">Contact</a></li>
   <li>
     <a *ngIf="!isLoggedIn" [routerLink]="['/login']" class="btn-primary">Se connecter</a>
-    <a *ngIf="isLoggedIn" [routerLink]="['/admin']" class="btn-primary">Espace client</a>
+    <a *ngIf="isLoggedIn" [routerLink]="['/client']" class="btn-primary">Espace client</a>
   </li>
 </ul>

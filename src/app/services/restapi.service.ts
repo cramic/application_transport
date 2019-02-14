@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../models/user';
+import { LoginToken } from '../models/login-token';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class RestapiService {
   static API_URL = 'http://localhost:8001/api/v1/';
   loggedIn: BehaviorSubject<boolean>;
   user: User;
+  loginToken: LoginToken;
 
   constructor(private http: HttpClient) {
     this.loggedIn = new BehaviorSubject<boolean>(false);
@@ -44,17 +46,46 @@ export class RestapiService {
     this.loggedIn.next(false);
   }
 
+  /**
+   * Function that allows to know if logged in or not
+   */
   isLoggedIn(): Observable<boolean> {
     return this.loggedIn.asObservable();
   }
 
-  // firstConnexion(user): Observable<User> {
-  //   const headers = new HttpHeaders({'Content-Type': 'application/json'});
+  /**
+   *
+   */
+  comparePwd(password): Observable<any> {
+    const headers = new HttpHeaders({'Content-type': 'application/json'});
+    console.log('password', password);
+    const data = {
+      passwordDB : this.user.password,
+      passwordConfirm : password
+    };
 
-    // const data = {
-    //   _id : id
-    // };
+    return this.http.post(`${RestapiService.API_URL}auth/comparePwd`, data, {headers});
+  }
 
-    // return this.http.update(`${RestapiService.API_URL}/user/${user._id}`);
-  // }
+
+  /**
+   *
+   */
+  updatePassword(password): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-type' : 'application/json',
+      'Authorization': `Bearer ${this.loginToken.accessToken}`
+    });
+
+    const data = {
+      newPassword : password,
+      // userId : this.user._id,
+      email : this.user.email
+    };
+
+    console.log('data', data);
+
+    return this.http.patch(`${RestapiService.API_URL}user/updatePassword/${this.user._id}`, data, {headers});
+
+  }
 }

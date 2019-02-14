@@ -49,9 +49,11 @@ export class LoginComponent implements OnInit {
       } else {
         /* if data are correct */
         const user = data.user;
+        const token = data.token;
 
         this.restapiService.signin();
         this.restapiService.user = user;
+        this.restapiService.loginToken = token;
 
         if (user.pwd_changed === false) {
           this.router.navigate(['/passwordNew']);
